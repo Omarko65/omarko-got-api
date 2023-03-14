@@ -1,0 +1,61 @@
+
+
+.about {
+    line-height: 25px;
+    margin: 20px 70px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: light;
+    font-size: 15px;
+}
+h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: normal;
+    font-size: 25px;
+}
+
+h4 {
+    margin-top: 15px;
+}
+p{
+    margin-top: 15px;
+}
+
+a {
+    
+    font-weight: bold;
+    color: #e0e0e0;
+}
+a.active, a:hover{
+    text-decoration: underline;
+    background-color: #292929;
+}
+.docum {
+    line-height: 25px;
+    margin: 20px 100px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: light;
+    font-size: 15px;
+}
+
+
+textarea {
+    width: 60vw;
+    resize: none;
+}
+
+textarea:focus {
+    outline: none;
+}
+.val_attr{
+    background-color: white;
+    color: red;
+    border-radius: 2px;
+}
+ul {
+    margin-left: 35px;
+}
+li{
+    list-style: circle;
+    list-style-type: disc;
+}

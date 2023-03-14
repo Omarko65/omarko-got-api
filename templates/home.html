@@ -1,0 +1,110 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMARKO-GOT-API</title>
+    <link rel="stylesheet" href="../static/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+<script src="https://kitfontawesome.com/a076d05399.js"></script>
+
+</head> 
+<body>
+    <nav> 
+        <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/documentation">Documentation</a></li>
+        </ul>
+    </nav>
+    <!-- header created -->
+    <div class="heading">
+        <div class="header">
+            <h1>OMARKO-GOT-API</h1>
+            <h3>A GAME OF THRONE API</h3>
+            <h3>INSPIRED BY <a href="https://swapi-api.alx-tools.com/">SWAPI API</a></h3>
+        </div>
+    </div>
+    <!-- introduction -->
+    <div class="intro">
+        <p>
+        ALL THE GAME OF THRONES DETAILS YOU'RE LOOKING FOR: <br>
+        <b>CHARACTERS, HOUSES, CASTLES, SEASONS & EPOSODES</b>
+        <br>
+        FROM THE BOOKS AND THE SHOW
+        <br>
+        GET IT ALL FOR THE GOOD OF THE REALM!!!
+        </p>
+    </div>
+    <br>
+    <!-- request button -->
+    <span class="tryit">Try it now!</span>
+    <div class="midsection">
+        <div class="search">
+            <form id="postrequest" method="GET" autocomplete="off">
+                <span class="label"><label for="request" class="omarko">https://omarko-got-api/</label></span>
+                <input type="text" name="reqString" id="userInput" placeholder="castles/119/">
+                <input type="submit" class="sub" value="request">
+                <span class="hint" >Need a hint? Try <em>characters/1/</em> or <em>castles/1/</em> or <em>houses/1/</em></span>
+            </form>
+        </div>
+    </div>
+        <div class="result">
+            <p>Result:</p>
+            
+            
+            <textarea id="result" readonly>{{ html_res }}</textarea>
+                
+        </div>
+    </div>    
+    <div class="footer">
+        <ul>
+            <li>
+            <h2>What is omarko-got-api?</h2>
+            <p>Omarko-got-api is an alx-software engineering project centered around the Game Of Thrones universe. </p>
+            <p>
+            <br>
+            This project turns Game of thrones data into an API so that it can be accessed by users</p>
+            </li>
+            <li>
+            <h2>How to use it</h2>
+            <p>All you need to do is type in what you're interested in.</p>
+            <br>
+            <p>You can view documentation for a full guide</p>
+            </li>
+            <li>
+            <h2>Origin Project</h2>
+            <p>This project is wholey and fully inspired by <a href="https://swapi-api.alx-tools.com/"> Swapi-api</a></p>
+            </li>
+        </ul>
+    </div>
+</body>
+    <script>
+        document.getElementById('postrequest').addEventListener('submit', getData);
+
+        function getData(e){
+            e.preventDefault();
+
+            var name = document.getElementById('userInput').value;
+            var params = {user_input:name}
+            for (const [key, value] of Object.entries(params)) {
+                val = value;
+            }
+            var xhr = new XMLHttpRequest();
+            var url = `../${val}`
+            xhr.open('get', url, true);
+            xhr.setRequestHeader('Content-type', 'application/json');
+            xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+
+            xhr.onload = function(){
+                document.getElementById('result').innerHTML= this.responseText;
+            }
+            xhr.send(JSON.stringify(params));
+        }
+    </script>
+</html>

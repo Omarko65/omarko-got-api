@@ -1,0 +1,248 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Gloock', serif;
+    color: #E0E0E0;
+    background: #292929;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav{
+    background-color: #333333;
+    height: 55px;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 7px;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+    font-family: 'Lato', sans-serif;
+}
+nav ul li {
+    display: inline-block;
+    line-height: 20px; 
+    margin: 0px -3px;
+    padding: 16px 0px;
+    border-left: 1px solid #474747;
+    border-top-color: #333333;
+    border-right: 1px solid #141414;
+}
+
+nav ul li a {
+    margin: 0px;
+    font-size: 17px;
+    text-transform: uppercase;
+    color: #E0E0E0;
+    padding: 20px 13px;
+    font-size: 12px;
+}
+
+a.active, a:hover{
+    background: #141414;
+}
+
+
+.heading {
+    background: #1F1F1F;
+    text-align: center;
+    margin-top: 60px;
+    height: 250px;
+    width: 100%; 
+    border-radius: 10px;
+    border: solid;
+    border-color: #141414;
+    line-height: 40px;
+    position: static;
+}
+
+.header{
+    margin: 25px 0px;
+    padding: 2.5rem;
+    color: #B8A200;
+}
+
+.header h1{
+    font-size: 35px;
+}
+.header h3{
+    font-size: 20px;
+    
+} 
+.header h3 a{
+    text-decoration: none;
+    color: white;
+}
+
+
+.intro {
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+.intro p{
+    color: #E0E0E0;
+    text-align: center;
+    font-style: italic;
+    font-size: 15px;
+    margin: 1.5rem 1.5rem;
+    line-height: 30px;
+}
+
+.tryit{
+    display: block;
+    text-align: center;
+    font-size: 38px;
+    margin: 5px;
+    color: #E0E0E0;
+}
+
+.search {
+    text-align: center;
+    margin-top: 16px;
+}
+
+
+@media only screen and (max-width: 414px) {
+    .search input[name=request]{
+        max-width: 20vw;
+    }
+}
+
+
+.search input[type=text]{
+    position:relative;
+    width: 40vw;
+    height: 35px;
+    padding: 0 15px;
+    font-size: 15px;
+    outline: none;
+    text-transform: lowercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.search input[type=text]:focus{
+    border:1px solid rgba(42, 176, 237, 1);
+}
+
+
+
+.search input[type=submit]{
+    position: static;
+    height: 32px;
+    color: white;
+    background: #666666;
+    border: solid; 
+    border-color: #666666;
+    border-radius: 3px;
+    padding: 5px 12px;
+    padding-bottom: 3px;
+    margin: -6px;
+    cursor: pointer;
+}
+.search input[type=submit]:hover{
+    background: #333333;
+}
+
+.search input[type=submit]:focus {
+    border: solid;
+    border-color: white;
+}
+.search input::placeholder {
+    font-size: 15px;
+    color: #999595;
+
+}
+
+
+.label{
+    color: white;
+    background: #474747;
+    margin-right: -6px; 
+    padding: 5px 12px;
+    border: solid;
+    border-color: #474747;
+    border-radius: 3px;
+    position: static;
+}
+
+.omarko{
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: normal;
+}
+
+.hint{
+    display: block;
+    text-align: center; 
+    margin-top: 2px;
+    font-size: 12px;
+}
+.hint em{
+    color: white;
+}
+
+.search button:hover{
+    background: #333333;
+}
+
+
+.result{
+    text-align: center;
+    margin-top: 35px;
+    
+}
+
+.result p{
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.result textarea{
+    width: 60vw;
+    height: 270px;
+    border-style: solid;
+    border-width: 15px;
+    border-color: black;
+    border-radius: 7px;
+    resize: none;
+}
+
+.result textarea:focus {
+    outline: none;
+}
+
+.footer ul{
+    margin: 30px 30px;
+    text-align: center;
+}
+.footer ul li {
+    display: inline-table;
+    width: 290px;
+    height: 170px;
+    margin: 5px 50px;
+    margin-bottom: 15px;
+}
+
+.footer ul li h2{
+    text-align: center;
+    font-size: 17px;
+    margin: 15px;
+    letter-spacing: 3px;
+}
+
+.footer ul li p{
+    font-size: 12px;
+    letter-spacing: 2px;
+    line-height: 15px;
+
+}
+.footer ul li a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: bold;
+}
