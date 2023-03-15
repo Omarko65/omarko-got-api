@@ -38,21 +38,18 @@
         <h3>Introduction</h3>
         <p>This documentation will be your guide on how to use OMARKO-GOT-API. It will show you how to request for data and explain what the data you've gotten means. Enojoy!</p>
 
-        <br>
-
+        
         <h3>How To Use</h3>
         <p>
             To send your first request you can use the request tool in the <a href="/home">home page</a> or you can send a get request using curl or any other way you see fit
         </p>
 
-        <br>
 
         <div class="example">
             <textarea readonly class="example_txt" name="castle_5_req" cols="50" rows="2">curl "https://omarko-got-api/castles/10"</textarea> 
         </div>
         <p>You will get this response back</p>
 
-        <br>
 
         <div class="exampleresponse">
         <textarea readonly class="example_txt" name="" id="" cols="70" rows="19">
@@ -77,25 +74,21 @@
         </textarea>
         </div>
 
-        <br>
 
         <h3>ROOT URL</h3>
         <p>The root URL for all the api served is</p>
             <textarea readonly class="example_txt" name="castle_5_req"  cols="40" rows="2">curl "https://omarko-got-api/api/"</textarea>
         
-        <br>
 
         <h3>RESOURCES</h3>
         <p>Here is all the information on the API OMARKO-GOT-API gives you</p>
         
-        <br>
         <h3>Root</h3>
         <p>You can get information about api from the root</p>
         
         <h4>Example</h4>
             <textarea readonly class="example_txt" name="api_req" cols="40" rows="2">curl "https://omarko-got-api/api/"</textarea>
 
-            <br>
 
             <h4>Response</h4>
         <textarea readonly class="example_txt" name="api_res" cols="70" rows="8">
@@ -109,14 +102,14 @@
         </textarea>
         <h4>Attributes</h4>
             <ul>
-                <li><span class="val_attr">castles</span> <i>string</i>-- This is the URL for castle resources</li>
-                <li><span class="val_attr">houses</span> <i>string</i>-- This is the URL for house resources</li>
-                <li><span class="val_attr">characters</span> <i>string</i>-- This is the URL for character resources</li>
-                <li><span class="val_attr">seasons</span> <i>string</i>-- This is the URL for season resources</li>
-                <li><span class="val_attr">episodes</span> <i>string</i>-- This is the URL for episode resources</li>
+                <li><span class="val_attr">castles</span> <i>string</i> -- This is the URL for castle resources</li>
+                <li><span class="val_attr">houses</span> <i>string</i> -- This is the URL for house resources</li>
+                <li><span class="val_attr">characters</span> <i>string</i> -- This is the URL for character resources</li>
+                <li><span class="val_attr">seasons</span> <i>string</i> -- This is the URL for season resources</li>
+                <li><span class="val_attr">episodes</span> <i>string</i> -- This is the URL for episode resources</li>
             </ul>
         
-        <br>
+        
 
         <h3>Castles</h3>
         <p> The Castles endpoint responds with castles in the Game Of Thrones World</p>
@@ -125,11 +118,11 @@
         <li><span class="val_attr">/castles/</span> -- returns all castles data</li>
         <li><span class="val_attr">/castles/:id/</span> -- returns castle data with specific id</li>
     
-        <br>
+        
         <h4>Example</h4>
         <textarea readonly class="example_txt" name="api_req" cols="40" rows="2">curl "https://omarko-got-api/castle/119/"</textarea>
         
-        <br>
+        
         <h4>Response</h4>
         <textarea readonly class="example_txt" name="api_res" cols="70" rows="19">
 {
@@ -153,16 +146,16 @@
         </textarea>
         <h4>Attributes</h4>
         <ul>
-            <li><span class="val_attr">religion</span> <i>array</i>-- An array of the religion of holder of castle</li>
-            <li><span class="val_attr">founder</span> <i>array</i>-- An array of founder of castle</li>
-            <li><span class="val_attr">name</span> <i>string</i>-- Name of castle</li>
-            <li><span class="val_attr">location</span> <i>string</i>-- Location of castle</li>
-            <li><span class="val_attr">age</span> <i>int</i>-- Age of castle</li>
-            <li><span class="val_attr">castle_id</span> <i>int</i>-- Id used to fetch castle data</li>
-            <li><span class="val_attr">holder</span> <i>array</i>-- Array containing holders of castle </li>
+            <li><span class="val_attr">religion</span> <i>array</i> -- An array of the religion of holder of castle</li>
+            <li><span class="val_attr">founder</span> <i>array</i> -- An array of founder of castle</li>
+            <li><span class="val_attr">name</span> <i>string</i> -- Name of castle</li>
+            <li><span class="val_attr">location</span> <i>string</i> -- Location of castle</li>
+            <li><span class="val_attr">age</span> <i>int</i> -- Age of castle</li> 
+            <li><span class="val_attr">castle_id</span> <i>int</i> -- Id used to fetch castle data</li>
+            <li><span class="val_attr">holder</span> <i>array</i> -- Array containing holders of castle </li>
         </ul>
 
-        <br>
+        
 
         <h3>Houses</h3>
         <p> The House endpoint responds with different houses in the Game Of Thrones World</p>
@@ -170,11 +163,11 @@
         <li><span class="val_attr">/houses/</span> -- returns all house data</li>
         <li><span class="val_attr">/houses/:id/</span> -- returns house data with specific id</li>
         
-        <br>
+        
         <h4>Example</h4>
         <textarea readonly class="example_txt" name="api_req" cols="40" rows="2">curl "https://omarko-got-api/houses/10/"</textarea>
         
-        <br>
+        
         <h4>Response</h4>
         <textarea readonly class="example_txt" name="api_res" cols="70" rows="27">
 {
@@ -205,24 +198,24 @@
         </textarea>
         <h4>Attributes</h4>
         <ul>
-            <li><span class="val_attr">title</span> <i>array</i>-- Array of house title</li>
-            <li><span class="val_attr">overlords</span> <i>array</i>-- Overlords of house</li>
-            <li><span class="val_attr">ancestralWeapon</span> <i>array</i>-- House ancestral weapon</li>
-            <li><span class="val_attr">coatOfArms</span> <i>string</i>-- Coat of arm of house</li>
-            <li><span class="val_attr">word</span> <i>string</i>-- Phrase use by house frequently</li>
-            <li><span class="val_attr">currentLord</span> <i>string</i>-- Current lord of house</li>
-            <li><span class="val_attr">seat</span> <i>string</i>-- House seat</li>
-            <li><span class="val_attr">region</span> <i>string</i>-- Region house if from</li>
-            <li><span class="val_attr">founded</span> <i>int</i>-- When house was founded</li>
-            <li><span class="val_attr">founder</span> <i>string</i>-- Founder of house</li>
-            <li><span class="val_attr">cadetBranch</span> <i>string</i>-- Branch of house</li>
-            <li><span class="val_attr">heir</span> <i>string</i>-- Heir of house</li>
-            <li><span class="val_attr">isExtinct</span> <i>boolean</i>-- True if house is extinct else False</li>
-            <li><span class="val_attr">house_name</span> <i>string</i>-- Hous_txte name</li>
-            <li><span class="val_attr">house_id</span> <i>int</i>-- Id used to fetch house data </li>
+            <li><span class="val_attr">title</span> <i>array</i> -- Array of house title</li>
+            <li><span class="val_attr">overlords</span> <i>array</i> -- Overlords of house</li>
+            <li><span class="val_attr">ancestralWeapon</span> <i>array</i> -- House ancestral weapon</li>
+            <li><span class="val_attr">coatOfArms</span> <i>string</i> -- Coat of arm of house</li>
+            <li><span class="val_attr">word</span> <i>string</i> -- Phrase use by house frequently</li>
+            <li><span class="val_attr">currentLord</span> <i>string</i> -- Current lord of house</li>
+            <li><span class="val_attr">seat</span> <i>string</i> -- House seat</li>
+            <li><span class="val_attr">region</span> <i>string</i> -- Region house if from</li>
+            <li><span class="val_attr">founded</span> <i>int</i> -- When house was founded</li>
+            <li><span class="val_attr">founder</span> <i>string</i> -- Founder of house</li>
+            <li><span class="val_attr">cadetBranch</span> <i>string</i> -- Branch of house</li>
+            <li><span class="val_attr">heir</span> <i>string</i> -- Heir of house</li> 
+            <li><span class="val_attr">isExtinct</span> <i>boolean</i> -- True if house is extinct else False</li>
+            <li><span class="val_attr">house_name</span> <i>string</i> -- Hous_txte name</li>
+            <li><span class="val_attr">house_id</span> <i>int</i> -- Id used to fetch house data </li>
         </ul>
-        <br>
-        <br>
+        
+        
 
 
         <h3>Characters</h3>
@@ -232,10 +225,10 @@
         <li><span class="val_attr">/characters/</span> -- returns all character data</li>
         <li><span class="val_attr">/characters/:id/</span> -- returns character data with specific id</li>
         
-        <br>
+        
 
         <h4>Example</h4>
-        <textarea readonly class="example_txt" name="api_req" cols="50" rows="2">curl "https://omarko-got-api/characters/1857/"</textarea>
+        <textarea readonly class="example_txt" name="api_req" cols="80" rows="2">curl "https://omarko-got-api/characters/1857/"</textarea>
         
         <h4>Response</h4>
         <textarea readonly class="example_txt" name="api_res" cols="70" rows="14">
@@ -255,18 +248,18 @@
         </textarea>
         <h4>Attributes</h4>
         <ul>
-            <li><span class="val_attr">title</span> <i>array</i>-- An array containing character's titles</li>
-            <li><span class="val_attr">spouse</span> <i>array</i>-- Spouse of character</li>
-            <li><span class="val_attr">children</span> <i>array</i>-- Children of character</li>
-            <li><span class="val_attr">name</span> <i>string</i>-- Name of character</li>
-            <li><span class="val_attr">gender</span> <i>string</i>-- Gender of character</li>
-            <li><span class="val_attr">culture</span> <i>string</i>-- Culture of character</li>
-            <li><span class="val_attr">house</span> <i>string</i>-- House character belongs to</li>
-            <li><span class="val_attr">alive</span> <i>boolean</i>-- True if character is alive or False if not</li>
-            <li><span class="val_attr">character_id</span> <i>int</i>-- id used to fetch character data</li>
-        </ul>
+            <li><span class="val_attr">title</span> <i>array</i> -- An array containing character's titles</li>
+            <li><span class="val_attr">spouse</span> <i>array</i> -- Spouse of character</li>
+            <li><span class="val_attr">children</span> <i>array</i> -- Children of character</li>
+            <li><span class="val_attr">name</span> <i>string</i> -- Name of character</li>
+            <li><span class="val_attr">gender</span> <i>string</i> -- Gender of character</li>
+            <li><span class="val_attr">culture</span> <i>string</i> -- Culture of character</li>
+            <li><span class="val_attr">house</span> <i>string</i> -- House character belongs to</li>
+            <li><span class="val_attr">alive</span> <i>boolean</i> -- True if character is alive or False if not</li>
+            <li><span class="val_attr">character_id</span> <i>int</i> -- id used to fetch character data</li>
+        </ul> 
 
-        <br>
+        
 
         <h3>Season</h3>
         <p> The season endpoint responds with different seasons of the Game Of Thrones show</p>
@@ -274,7 +267,7 @@
         <li><span class="val_attr">/seasons/</span> -- returns all seasons data</li>
         <li><span class="val_attr">/seasons/:id/</span> -- returns season data with specific id</li>
         
-        <br>
+        
 
         <h4>Example</h4>
         <textarea readonly class="example_txt" name="api_req" cols="50" rows="2">curl "https://omarko-got-api/seasons/2/"</textarea>
@@ -307,16 +300,16 @@
         </textarea>
         <h4>Attributes</h4>
         <ul>
-            <li><span class="val_attr">season</span> <i>int</i>-- Season of Game of Thrones show</li>
-            <li><span class="val_attr">episodes</span> <i>int</i>-- Number of episodes in season</li>
-            <li><span class="val_attr">premiere</span> <i>string</i>-- Season premiere</li>
-            <li><span class="val_attr">finale</span> <i>string</i>-- Season finale</li>
-            <li><span class="val_attr">airDate</span> <i>array</i>--Array containing date aired and date ended</li>
-            <li><span class="val_attr">season_id</span> <i>int</i>-- Id used to fetch data</li>
-            <li><span class="val_attr">episodes_name</span> <i>array</i>-- Array containing names of episodes in season</li>
+            <li><span class="val_attr">season</span> <i>int</i> -- Season of Game of Thrones show</li>
+            <li><span class="val_attr">episodes</span> <i>int</i> -- Number of episodes in season</li>
+            <li><span class="val_attr">premiere</span> <i>string</i> -- Season premiere</li>
+            <li><span class="val_attr">finale</span> <i>string</i> -- Season finale</li>
+            <li><span class="val_attr">airDate</span> <i>array</i> --Array containing date aired and date ended</li>
+            <li><span class="val_attr">season_id</span> <i>int</i> -- Id used to fetch data</li>
+            <li><span class="val_attr">episodes_name</span> <i>array</i> -- Array containing names of episodes in season</li>
         </ul>
 
-        <br>
+        
         
         <h3>Episodes</h3>
         <p> The episode endpoint responds with different episodes of the Game Of Thrones show</p>
@@ -324,7 +317,7 @@
         <li><span class="val_attr">/episodes/</span> -- returns all episodes data</li>
         <li><span class="val_attr">/episodes/:id/</span> -- returns episode data with specific id</li>
         
-        <br>
+        
         <h4>Example</h4>
         <textarea readonly class="example_txt" name="api_req" cols="50" rows="2">curl "https://omarko-got-api/episodes/2/"</textarea>
         
@@ -355,16 +348,16 @@
         </textarea>
         <h4>Attributes</h4>
         <ul>
-            <li><span class="val_attr">characters</span> <i>array</i>-- Array of characters in this episode</li>
-            <li><span class="val_attr">director</span> <i>string</i>-- Director of episode</li>
-            <li><span class="val_attr">airDate</span> <i>string</i>-- Date episode aired</li>
-            <li><span class="val_attr">Season</span> <i>int</i>-- Season episode belongs to</li>
+            <li><span class="val_attr">characters</span> <i>array</i> -- Array of characters in this episode</li>
+            <li><span class="val_attr">director</span> <i>string</i> -- Director of episode</li>
+            <li><span class="val_attr">airDate</span> <i>string</i> -- Date episode aired</li>
+            <li><span class="val_attr">Season</span> <i>int</i> -- Season episode belongs to</li>
             <li><span class="val_attr">name</span> <i>string</i>-- Name of episode</li>
-            <li><span class="val_attr">predecessor</span> <i>string</i>-- Previous episode</li>
-            <li><span class="val_attr">successor</span> <i>string</i>-- Next episode</li>
-            <li><span class="val_attr">total_episodes</span> <i>int</i>-- Total episode number in all seasons</li>
-            <li><span class="val_attr">episode</span> <i>int</i>-- Episode number in season it belongs to</li>
-            <li><span class="val_attr">episode_id</span> <i>int</i>-- Episode Id used to fetch data</li>
+            <li><span class="val_attr">predecessor</span> <i>string</i> -- Previous episode</li>
+            <li><span class="val_attr">successor</span> <i>string</i> -- Next episode</li>
+            <li><span class="val_attr">total_episodes</span> <i>int</i> -- Total episode number in all seasons</li>
+            <li><span class="val_attr">episode</span> <i>int</i> -- Episode number in season it belongs to</li>
+            <li><span class="val_attr">episode_id</span> <i>int</i> -- Episode Id used to fetch data</li>
         </ul>
 </div>
 </body>    
