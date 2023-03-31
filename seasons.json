@@ -1,0 +1,122 @@
+{
+        "count": 5,
+        "status": "success",
+        "results": [
+                {
+                        "season": 1,
+                        "episodes": 10,
+                        "premiere": "winter is Coming",
+                        "finale": "Fire and Blood",
+                        "airDate": [
+                                "2011-04-17",
+                                "2011-06-29"
+                        ],
+                        "season_id": 1,
+                        "episodes_name": [
+                                "Winter is coming",
+                                "The Kingsroad",
+                                "Lord Snow",
+                                "Cripples, Bastards and Broken Things",
+                                "The Wolf and the Lion",
+                                "A Golden Crown",
+                                "You Win or You Die",
+                                "The Pointy End",
+                                "Baelor",
+                                "Fire and Blood"
+                        ]
+                },
+                {
+                        "season": 2,
+                        "episodes": 10,
+                        "premiere": "The North Remembers",
+                        "finale": "Valar Morghulis",
+                        "airDate": [
+                                "2012-04-1",
+                                "2011-06-3"
+                        ],
+                        "season_id": 2,
+                        "episodes_name": [
+                                "The North Remembers",
+                                "The Night Lands",
+                                "What Is Dead May Never Die",
+                                "Garden of Bones",
+                                "The Ghost of Harrenhal",
+                                "The Old Gods and the New",
+                                "A Man Without Honor",
+                                "The Prince of Winterfell",
+                                "Blackwater",
+                                "Valar Morghulis"
+                        ]
+                },
+                {
+                        "season": 3,
+                        "episodes": 10,
+                        "premiere": "Valar Dohaeris",
+                        "finale": "Mhyas",
+                        "airDate": [
+                                "2013-03-31",
+                                "2013-06-9"
+                        ],
+                        "season_id": 3,
+                        "episodes_name": [
+                                "Valar Dohaeris",
+                                "Dark Wings, Dark Words",
+                                "Walk of Punishment",
+                                "And Now His Watch Is Ended",
+                                "Kissed by Fire",
+                                "The Climb",
+                                "The Bear and the Maiden Fair",
+                                "Second Sons",
+                                "The Rains of Castamere",
+                                "Blackwater",
+                                "Mhysa"
+                        ]
+                },
+                {
+                        "season": 4,
+                        "episodes": 10,
+                        "premiere": "Two Swords",
+                        "finale": "The Children",
+                        "airDate": [
+                                "2014-04-6",
+                                "2014-06-15"
+                        ],
+                        "season_id": 4,
+                        "episodes_name": [
+                                "Two Swords",
+                                "The Lion and the Rose",
+                                "Breaker of Chains",
+                                "Oathkeeper",
+                                "First of His Name",
+                                "The Laws of Gods and Men",
+                                "Mockingbird",
+                                "The Mountain and the Viper",
+                                "The Watchers on the Wall",
+                                "The Children"
+                        ]
+                },
+                {
+                        "season": 5,
+                        "episodes": 10,
+                        "premiere": "The Wars To Come",
+                        "finale": "Mother's Mercy",
+                        "airDate": [
+                                "2015-04-12",
+                                "2015-06-14"
+                        ],
+                        "season_id": 5,
+                        "episodes_name": [
+                                "The Wars To Come",
+                                "The House of Black and White",
+                                "High Sparrow",
+                                "Sons of the Harpy",
+                                "Kill the Boy",
+                                "Unbowed, Unbent, Unbroken",
+                                "The Gift",
+                                "Hardhome",
+                                "The Dance of Dragons",
+                                "Mother's Mercy"
+                        ]
+                }
+        ]
+}
