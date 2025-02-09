@@ -11,8 +11,16 @@ db = SQLAlchemy()
 
 def create_app():
     app = Flask(__name__)
-    app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
-    app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DB_URI")
+    app.config.update({
+        "SQLALCHEMY_DATABASE_URI": os.getenv("DB_URI")+"?sslmode=require",
+        "SQLALCHEMY_ENGINE_OPTIONS": {
+            "pool_pre_ping": True,  # Check connections before use
+            "pool_recycle": 300,    # Recycle connections every 5 minutes
+            "pool_size": 10,        # Adjust based on your needs
+            "max_overflow": 5,
+        },
+        "JSONIFY_PRETTYPRINT_REGULAR": True
+    })
     db.init_app(app)
 
     from routes import register_routes

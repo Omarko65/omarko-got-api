@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, jsonify, Blueprint
 from fetch_req import  convert_to_int
+from sqlalchemy.exc import OperationalError
 from models.model import Season, Episode, Castle, Character, House
 import json
 
@@ -22,9 +23,15 @@ def register_routes(app, db):
     @app.route("/home/", methods=['GET', 'POST'])
     @app.route("/", methods=['GET', 'POST'])
     def home():
-        data = Castle.query.filter_by(castle_id=119).first()
+        try:
+            data = Castle.query.filter_by(castle_id=119).first()
+        except OperationalError:
+            db.session.rollback()  
+            data = Castle.query.filter_by(castle_id=119).first()
+    
         castle = json.dumps(data.to_dict(), indent=2)
         return render_template('home.html', html_res=castle)
+        
 
     @app.route("/documentation/", methods=['GET', 'POST'])
     def documentation():
