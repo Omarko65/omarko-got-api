@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify, Blueprint
+from flask import Flask, render_template, Response, jsonify, Blueprint
 from fetch_req import  convert_to_int
 from sqlalchemy.exc import OperationalError
 from models.model import Season, Episode, Castle, Character, House
@@ -55,7 +55,11 @@ def register_routes(app, db):
             "houses": "https://omarko-got-api/api/houses/",
             "seasons": "https://omarko-got-api/api/seasons/"
         }
-        return jsonify(allapi)
+        
+        return Response(
+                json.dumps(allapi, indent=2),
+                mimetype='application/json'
+            )
 
 
     '''Route to api data'''
@@ -72,17 +76,26 @@ def register_routes(app, db):
             data = Castle.query.filter_by(castle_id=id).first()
             if data is None:
                 return ('404 NOT FOUND', 404)
-            castle = data.to_dict()
-            return jsonify(castle)
+        
+            return Response(
+                json.dumps(data.to_dict(), indent=2),
+                mimetype='application/json'
+            )
 
         else:
             castles = Castle.query.all()
             counts = Castle.query.count()
-            return jsonify({
+            resp = {
                 'counts': counts, 
                 'status': 'successful',
                 'results': [castle.to_dict() for castle in castles]
-            })
+            }
+        
+            
+            return Response(
+                json.dumps(resp, indent=2),
+                mimetype='application/json'
+            )
 
 
     '''Route to houses data'''
@@ -99,17 +112,25 @@ def register_routes(app, db):
             data = House.query.filter_by(house_id=id).first()
             if data is None:
                 return ('404 NOT FOUND', 404)
-            house = data.to_dict()
-            return jsonify(house)
+            
+            return Response(
+                json.dumps(data.to_dict(), indent=2),
+                mimetype='application/json'
+            )
         
         else:
             houses = House.query.all()
             counts = House.query.count()
-            return jsonify({
+            resp = {
                 'counts': counts, 
                 'status': 'successful',
                 'results': [house.to_dict() for house in houses]
-            })
+            }
+            
+            return Response(
+                json.dumps(resp, indent=2),
+                mimetype='application/json'
+            )
 
 
 
@@ -124,18 +145,26 @@ def register_routes(app, db):
             data = Character.query.filter_by(character_id=id).first()
             if data is None:
                 return ('404 NOT FOUND', 404)
-            character = data.to_dict()
-            return jsonify(character)
+            
+            return Response(
+                json.dumps(data.to_dict(), indent=2),
+                mimetype='application/json'
+            )
         
 
         else:
             characters = Character.query.all()
             counts = Character.query.count()
-            return jsonify({
+            resp = {
                 'counts': counts, 
                 'status': 'successful',
                 'results': [character.to_dict() for character in characters]
-            })
+            }
+                        
+            return Response(
+                json.dumps(resp, indent=2),
+                mimetype='application/json'
+            )
 
 
 
@@ -150,18 +179,26 @@ def register_routes(app, db):
             data = Episode.query.filter_by(episode_id=id).first()
             if data is None:
                 return ('404 NOT FOUND', 404)
-            episode = data.to_dict()
-            return jsonify(episode)
+            
+            return Response(
+                json.dumps(data.to_dict(), indent=2),
+                mimetype='application/json'
+            )
         
             
         else:
             episodes = Episode.query.all()
             counts = Episode.query.count()
-            return jsonify({
+            resp = {
                 'counts': counts, 
                 'status': 'successful',
                 'results': [episode.to_dict() for episode in episodes]
-            })
+            }
+        
+            return Response(
+                json.dumps(resp, indent=2),
+                mimetype='application/json'
+            )
 
 
 
@@ -176,16 +213,22 @@ def register_routes(app, db):
             data = Season.query.filter_by(season_id=id).first()
             if data is None:
                 return ('404 NOT FOUND', 404)
-            season = data.to_dict()
-            return jsonify(season)
+            
+            return Response(
+                json.dumps(data.to_dict(), indent=2),
+                mimetype='application/json'
+            )
         
         else:
             seasons = Season.query.all()
             counts = Season.query.count()
-            return jsonify({
+            resp = {
                 'counts': counts, 
                 'status': 'successful',
                 'results': [season.to_dict() for season in seasons]
-            })
-
+            }
+            return Response(
+                json.dumps(resp, indent=2),
+                mimetype='application/json'
+            )
 
