@@ -1,4 +1,4 @@
-alembic==1.14.1
+alembic
 autopep8==2.0.2
 blinker==1.8.2
 cachelib==0.9.0
