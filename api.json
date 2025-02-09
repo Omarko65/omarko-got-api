@@ -1,7 +1,0 @@
-{
-    "castles": "https://omarko-got-api/api/castles/",
-    "houses": "https://omarko-got-api/api/houses/",
-    "characters": "https://omarko-got-api/api/characters/",
-    "seasons": "https://omarko-got-api/api/seasons/",
-    "episodes": "https://omarko-got-api/api/episodes/"
-}
